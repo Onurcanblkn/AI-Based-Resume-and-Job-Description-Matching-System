@@ -359,15 +359,15 @@ def build_pdf_report(skill_score: float, text_score: float, overall: float,
                          color=(0.12, 0.16, 0.24))
         y += gap
 
+    def y_gap(amount: int = 10):
+        nonlocal y
+        y += amount
+
     def add_wrapped(title: str, value: str):
         add_line(title, 13, True, 20)
         for line in textwrap.wrap(value or "None", width=82):
             add_line(line, 10, False, 14)
         y_gap()
-
-    def y_gap(amount: int = 10):
-        nonlocal y
-        y += amount
 
     add_line("Resume Analyzer and Job Matching System", 18, True, 28)
     add_line("Match Report", 13, True, 24)
@@ -408,11 +408,9 @@ def main():
     st.markdown('<div class="theme-panel"><div class="theme-panel-title">'
                 'Theme Settings</div>', unsafe_allow_html=True)
     theme_name = st.radio(
-        "Choose theme",
+        "Theme",
         ["Dark", "Light"],
-        horizontal=True,
         key="theme_choice",
-        label_visibility="collapsed",
     )
     st.markdown('</div>', unsafe_allow_html=True)
 
