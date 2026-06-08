@@ -32,7 +32,15 @@ AI-based resume and job description matching system using NLP and TF-IDF.
 
 ## How to Run
 
+Original single-file version:
+
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
+```
+
+Modular version:
+
+```bash
+streamlit run app_modular.py
 ```
