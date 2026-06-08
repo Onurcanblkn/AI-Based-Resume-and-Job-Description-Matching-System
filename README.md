@@ -2,8 +2,6 @@
 
 AI-based resume and job description matching system using NLP and TF-IDF.
 
-Built for **SEN 4015 - Advanced Python Programming** Term Project.
-
 ## Features
 
 - Upload a resume as PDF and paste a job description
